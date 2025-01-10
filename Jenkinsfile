@@ -13,13 +13,7 @@ pipeline {
      steps {
        sh 'mvn clean package'
      }
-    }
-    stage('Test'){
-     steps{
-       echo("Lancement des test unitaire")
-       sh 'mvn test'
-     }
-    }  
+    } 
     stage('SonarQube Analysis') {
      steps {
        script {
